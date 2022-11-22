@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+        <section style="background-color: #eee;">
+            <div class="container py-5">
+
+
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <img src="<%= image.Image %>" alt="avatar" class="rounded-circle img-fluid"
+                                    style="width: 150px;">
+                                <h5 class="my-3"><%= image.name %></h5>
+                                <p class="text-muted mb-1">Full Stack Developer</p>
+                                <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                                <div class="d-flex justify-content-center mb-2">
+                                    <button type="button" class="btn btn-primary">Follow</button>
+                                    <button type="button" class="btn btn-outline-primary ms-1">Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-8">
+                        
+                        <div class="card mb-4">
+
+                            <div class="card-body">
+                                <a href="/registery/edit/<%= image._id %>" o><i class="fa fa-pencil"
+                                        style="font-size:25px;color:rgb(30, 255, 0)"></i></a>
+                                <a href="" onclick="return confirm(`are yo sure?)"><i class="fa fa-trash-o"
+                                        onclick="delete" style="font-size:25px;color:red"></i></a>
+
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Full Name</p>
+                                    </div>
+
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">
+                                            <%= image.name %>
+                                        </p>
+
+
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Email</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">
+                                            <%= image.email %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">DOB</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">
+                                            <%= image.Dob %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Mobile</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">
+                                            <%= image.mobile %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Address</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">
+                                            <%= image.address %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <p>
+                                            <a href="/logout" class="btn btn-info btn-lg">
+                                                <span class="glyphicon glyphicon-log-out"></span> Log out
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            <a href="/edit/<%= image._id %>" class="btn btn-info btn-lg">
+                                                <span class="btn btn-success"></span> Edit
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            <a href="/delete/<%= image._id %>" class="btn btn-info btn-lg">
+                                                <span class="btn btn-danger"></span> Delete
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+        
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+</body>
+
+</html>
